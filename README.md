@@ -26,3 +26,16 @@ In more dimentionals, though, vector multiplication takes place to calculate a o
 \* [Cubic Interpolation](https://www.paulinternet.nl/?page=bicubic)
 
 ![1D Octaves Noise Overlay Preview](https://user-images.githubusercontent.com/25326579/108261448-6a4acf80-7142-11eb-93ec-d0ac8e8f77f1.png)
+
+## 2 Dimentional Perlin Noise
+
+- [ ] Add Explanation
+- [ ] Bicubic interpolation
+- [ ] Octave Layering
+
+![2d Preview](https://user-images.githubusercontent.com/25326579/108288033-99753700-716a-11eb-8ab6-db76980dcc9b.png)
+
+
+## Permutation 
+
+- [ ] Concept
