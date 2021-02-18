@@ -4,7 +4,7 @@ window.onload = () => {
     const POINTS = 10; // more points = higher frequency
 
     canvas = document.querySelector('canvas');
-    ctx = canvas.getContext('2d');
+    ctx = canvas.getContext('2d'); 
 
     canvas.width = 1280;
     canvas.height = 720;

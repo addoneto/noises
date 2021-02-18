@@ -109,6 +109,9 @@ window.onload = () => {
     let canvasImg = ctx.getImageData(0, 0, canvas.width, canvas.height);
     let pixels = canvasImg.data;
 
+    // Offset increment define the frequency of the noise
+    // Higher increment mean lower frequency
+
     let yoffset = 0;
     for(let y = 0; y < canvas.height; y++){
         let xoffset = 0;

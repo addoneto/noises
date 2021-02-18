@@ -2,11 +2,15 @@
 
 ## References
 [Wikipedia Article](https://en.wikipedia.org/wiki/Perlin_noise)
+
 [Concept Explanation](https://web.archive.org/web/20080724063449/http://freespace.virgin.net/hugo.elias/models/m_perlin.htm)
+
+[Visual Explanation](https://www.youtube.com/watch?v=MJ3bvCkHJtE)
 
 ### Implemantations
 
 [Javascript Article 2](https://joeiddon.github.io/projects/javascript/perlin)
+
 [Javascript Article 1](http://asserttrue.blogspot.com/2011/12/perlin-noise-in-javascript_31.html)
 
 ## Overall Steps
@@ -26,6 +30,7 @@ In more dimentionals, though, vector multiplication takes place to calculate a o
 \* [Cubic Interpolation](https://www.paulinternet.nl/?page=bicubic)
 
 ![1D Octaves Noise Overlay Preview](https://user-images.githubusercontent.com/25326579/108261448-6a4acf80-7142-11eb-93ec-d0ac8e8f77f1.png)
+\* I'm using cosine interpolation in this example
 
 ## 2 Dimentional Perlin Noise
 
@@ -34,6 +39,12 @@ In more dimentionals, though, vector multiplication takes place to calculate a o
 - [ ] Octave Layering
 
 ![2d Preview](https://user-images.githubusercontent.com/25326579/108288033-99753700-716a-11eb-8ab6-db76980dcc9b.png)
+\* Using seeds to generate random unit vectors. This means that non vector need to be pregenerated
+
+### Failed Tries
+
+![Error 2d 1](https://user-images.githubusercontent.com/25326579/108421066-66d34900-7213-11eb-9cc4-104ee3cf59ab.png)
+![Error 2d 2](https://user-images.githubusercontent.com/25326579/108421071-676bdf80-7213-11eb-8afa-e8938d60ab33.png)
 
 
 ## Permutation 
