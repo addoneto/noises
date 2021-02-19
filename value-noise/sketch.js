@@ -126,4 +126,4 @@ function quadraticInterpolation(a, b, t){
 function cosineInterpolation(a, b, t){
     let ft = (1 - Math.cos(t * Math.PI) ) / 2;
     return(a * (1 - ft) + b * ft);
- }
+}

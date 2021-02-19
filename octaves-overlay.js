@@ -37,14 +37,19 @@ class gridPoints {
     calculateInterpolationPoints(){
         for(let i = 0; i < this.interpolatedValues.length; i++){
             let pointAIndex = Math.trunc(i / this.pointDistance);
+
             let a = this.values[pointAIndex];
             let b = this.values[pointAIndex + 1];
+
+            let v0 = this.values[pointAIndex - 1] === undefined ? a : this.values[pointAIndex - 1];
+            let v3 = this.values[pointAIndex + 2] === undefined ? b : this.values[pointAIndex + 2];
 
             let aXPos = pointAIndex * this.pointDistance;
             let bXPos = (pointAIndex + 1) * this.pointDistance;
             let t = transposeRange(aXPos, bXPos, i);
                 
-            let pointInterpolatedValue = cosineInterpolation(a, b, t);
+            // let pointInterpolatedValue = cosineInterpolation(a, b, t);
+            let pointInterpolatedValue = cubicInterpolation(v0, a, b, v3, t);
 
             this.interpolatedValues[i] = pointInterpolatedValue;
         }
@@ -138,6 +143,16 @@ function circle(x, y, r){
 function cosineInterpolation(a, b, t){
     let f = (1 - Math.cos(t * Math.PI)) * .5;
     return a * (1-f) + b*f;
+}
+
+function cubicInterpolation(v0, v1, v2, v3, t){
+    let t2 = t * t;
+    let a0 = v3 - v2 - v0 + v1;
+    let a1 = v0 - v1 - a0;
+    let a2 = v2 - v0;
+    let a3 = v1;
+
+    return (a0 * t * t2 + a1 * t2 + a2 * t + a3);
 }
 
 function transposeRange(mm, mx, v){
