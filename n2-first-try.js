@@ -17,7 +17,7 @@ window.onload = () => {
 
     iteratePixels();
 
-    // drawGrid();
+    drawGrid();
 }
 
 function generateGradientVectors(){
@@ -44,7 +44,6 @@ function iteratePixels(){
                 v3 = v2 + 1;
 
             // Offset Vectors
-            // Should normalize ??
             let v0disatance = new Vector2(x - xIndex * tileSize      , y - yIndex * tileSize);
             let v1disatance = new Vector2(x - (xIndex + 1) * tileSize, y - yIndex * tileSize);
             let v2disatance = new Vector2(x - xIndex * tileSize      , y - (yIndex + 1) * tileSize);
