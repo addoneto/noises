@@ -2,18 +2,29 @@
 
 ## Value Noise
 
-In value noise we difine a grid of values, closer a pixel is to the respective grid vertex, closer its value is. In higher frequency this can results in pretty blocky images, however with more reasonable frequencys the result is interesting.
+In value noise we define a grid of values, closer a pixel is to the respective grid vertex, closer its value is. In higher frequency this can results in pretty blocky images, however with more reasonable frequencys the result is interesting.
 
 Perlin noise, in the other hand uses gradient vectors that kinda push values in certain directions.
 
 ![Value Noise Preview](https://user-images.githubusercontent.com/25326579/108519255-3d183180-72a8-11eb-9963-a272657c489d.png)
 
+### Not Pregenerating values
+
+As Perlin noise, there's a way to generate random values based in the position of the pixel in a unit grid and a noise seed value. This can come very handy in multiple cases, you can repeat exactly the same set of values with the chosen seed and the x,y positions are not limited by the size of the grid you created.
+
+The frequency in this case is defined by a value multiplied by x,y or an increment offset witch changes each pixel. There are multiple techniques used to generate this values with cell vertex position and seed, however all them seem pretty complicated and with a lot of bitwise operators for generating the random numbers, so that's a subject for another time.
+
+- [ ] Generate values based on noise seed
+
 ## Perlin Noise
+
+[Visual Explanation](https://www.figma.com/file/Eug3XCNZ0Zj0RQNsn7qKpL/Perlin-Noise?node-id=0%3A1)
 
 ### References
 [Wikipedia Article](https://en.wikipedia.org/wiki/Perlin_noise)<br>
 [Concept Explanation](https://web.archive.org/web/20080724063449/http://freespace.virgin.net/hugo.elias/models/m_perlin.htm) <br>
 [Visual Explanation](https://www.youtube.com/watch?v=MJ3bvCkHJtE)
+[Complete Article](https://www.scratchapixel.com/lessons/procedural-generation-virtual-worlds/perlin-noise-part-2)
 
 #### Implemantations
 

@@ -1,7 +1,7 @@
 // Based on https://www.youtube.com/watch?v=wRxYafz3Hb8
 
 let canvas, ctx, xTiles, yTiles, valueGrid = new Array();
-const gridCellSize = 160;
+const gridCellSize = 200;
 
 window.onload = () => {
     canvas = document.querySelector('canvas');
@@ -66,7 +66,8 @@ function iteratePixels(){
             let final = cosineInterpolation(top, bottom, sy);
 
             // map value
-            let color = (final + 1) / 2 * 255;
+            // let color = (final + 1) / 2 * 255;
+            let color = final * 255;
 
             let index = (x + y * canvas.width) * 4;
 
